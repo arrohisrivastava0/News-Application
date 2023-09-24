@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202020"
+    tools:context=".NewsDetailActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/NewsDetailActTB"
+        app:title="Read More"
+        android:background="#202020"
+        app:titleTextColor="#D4D2D5"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/NewsDetailActTB"
+        android:id="@+id/ScrollNewsDetAct"
+        android:paddingBottom="70dp"
+        >
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/NewsDetCard"
+            app:cardBackgroundColor="#5F535D"
+            app:cardCornerRadius="15dp"
+            android:paddingBottom="10dp"
+
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_margin="10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="170dp"
+                    android:id="@+id/NewsDetailActIV"
+                    android:scaleType="centerCrop"
+                    android:layout_margin="5dp"
+                    android:padding="3dp"
+                    android:paddingStart="5dp"
+                    android:paddingEnd="5dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/NewsDetailActHeadTV"
+                    android:fontFamily="@font/abhaya_libre_bold"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="News Heading"
+                    android:textColor="#f5ebe0"
+                    android:textSize="22dp"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/NewsDetailActSubTV"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:text="News Sub-Heading"
+                    android:textStyle="italic"
+                    android:textColor="#F2C5E0"
+                    android:textSize="17dp"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/NewsDetailActContentTV"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginEnd="7dp"
+                    android:lineSpacingExtra="4sp"
+                    android:paddingBottom="7dp"
+                    android:text="hello everyniyan, how are you faain saankyu o mai gawd. i wish i were a bird"
+                    android:textColor="#F9F4F5"
+                    android:textSize="16dp"
+                    />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/NewsDetailActButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/purple"
+        android:padding="5dp"
+        android:text="Read Full Article"
+        android:textColor="@color/white"
+        android:textSize="17dp"
+        app:cornerRadius="10dp" />
+
+
+</RelativeLayout>

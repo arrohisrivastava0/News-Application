@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:layout_marginBottom="15dp"
+    app:cardBackgroundColor="#4E404C"
+    app:cardCornerRadius="7dp"
+    app:cardElevation="0dp">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="7dp"
+        android:layout_margin="5dp"
+        >
+
+        <ImageView
+            android:id="@+id/NewsImageIV"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+
+            android:scaleType="centerCrop" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/HeadingLL"
+            android:layout_below="@id/NewsImageIV"
+            >
+            <TextView
+                android:id="@+id/NewsHeadingTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.85"
+                android:fontFamily="@font/abhaya_libre_bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="5dp"
+                android:paddingBottom="5dp"
+                android:text="News Heading"
+                android:textColor="#f5ebe0"
+                android:textSize="22dp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/favIV"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="0.15"
+                android:src="@drawable/baseline_favorite_border_24" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/NewsDesTV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/HeadingLL"
+            android:fontFamily="sans-serif-light"
+            android:lineSpacingExtra="4sp"
+            android:paddingBottom="7dp"
+            android:text="hello everyniyan, how are you faain saankyu o mai gawd. i wish i were a bird"
+            android:textColor="#f9e5f1"
+            android:textSize="16dp" />
+
+        <Button
+            android:id="@+id/NewsReadMoreBV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/NewsDesTV"
+            android:backgroundTint="@color/purple"
+            android:padding="5dp"
+            android:text="Read More"
+            android:textColor="@color/white"
+            android:textSize="17dp"
+            app:cornerRadius="5dp" />
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

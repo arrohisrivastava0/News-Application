@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
+    android:background="#202020"
+    tools:context=".MainActivity">
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#202020"
+        >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/ToolBarTB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/menu_open"
+                android:src="@drawable/baseline_manage_search_24"
+                />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:fontFamily="@font/libre_baskerville_bold"
+            android:gravity="center"
+            android:text="News"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/favMenu"
+            android:src="@drawable/baseline_favorite_border_24"
+            android:layout_gravity="end"
+            android:layout_marginEnd="10dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/coordinator"
+        android:layout_below="@id/ToolBarTB"
+        android:background="#202020"
+        >
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#202020"
+            >
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/collapse"
+                android:layout_below="@id/ToolBarTB"
+                app:layout_scrollFlags="scroll|enterAlways"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/HottestTV"
+                        android:text="Hottest News"
+                        android:paddingBottom="5dp"
+                        android:layout_marginStart="15dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/white"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/hottestNews"
+                        android:layout_below="@id/HottestTV"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:fadingEdge="horizontal"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/hottest_news"
+                        />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ExploreTV"
+                        android:layout_below="@id/hottestNews"
+                        android:text="Explore"
+                        android:paddingBottom="5dp"
+                        android:paddingTop="5dp"
+                        android:layout_marginStart="15dp"
+                        android:textSize="25dp"
+                        android:textColor="@color/white"
+                        />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/CategoryItemsRV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/ExploreTV"
+                        android:fadingEdge="horizontal"
+                        android:orientation="horizontal"
+                        android:padding="5dp"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        tools:listitem="@layout/category_item" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/TotalResultTV"
+                        android:layout_below="@id/CategoryItemsRV"
+                        android:text="Total results: 38"
+                        android:textSize="16dp"
+                        android:textColor="#bcbcbc"
+                        android:paddingBottom="10dp"
+                        android:layout_marginStart="15dp"
+                        />
+                </RelativeLayout>
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/NewsRV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/coordinator"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            tools:listitem="@layout/news_rv_item"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <ProgressBar
+        android:id="@+id/LoadingPB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        />
+</RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation"
+        android:layout_gravity="start"
+        app:menu="@menu/navigation_menu"
+        />
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="blue_shade">#242632</color>
+    <color name="purple">#826C7F</color>
+    <color name="greyy">#6E7080</color>
+    <color name="yoy">#646671</color>
+    <color name="shadegpt">#454545</color>
+    <color name="preMainContent">#F9F4F5</color>
+</resources>
