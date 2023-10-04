@@ -89,7 +89,7 @@ public class MainActivity extends AppCompatActivity implements CategoryRVAdapter
         });
 
         getCategories();
-        getNews("All");
+        getNews();
         newsRVAdapter.notifyDataSetChanged();
         hottestNewsRVAdapter.notifyDataSetChanged();
     }
@@ -102,61 +102,72 @@ public class MainActivity extends AppCompatActivity implements CategoryRVAdapter
         bottomSheetView.findViewById(id.lang_english).setOnClickListener(view -> {
             lang="en";
             bottomSheetDialog.dismiss();
-            getNews("All");
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_spanish).setOnClickListener(view -> {
             lang="es";
             bottomSheetDialog.dismiss();
-            getNews("All");
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_Spanish2).setOnClickListener(view -> {
             lang="es";
             bottomSheetDialog.dismiss();
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_french).setOnClickListener(view -> {
             lang="fr";
             bottomSheetDialog.dismiss();
-            getNews("All");
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_arabic).setOnClickListener(view -> {
             lang="ar";
             bottomSheetDialog.dismiss();
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_chinese).setOnClickListener(view -> {
             lang="zh";
             bottomSheetDialog.dismiss();
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_dutch).setOnClickListener(view -> {
             lang="nl";
             bottomSheetDialog.dismiss();
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_german).setOnClickListener(view -> {
             lang="de";
             bottomSheetDialog.dismiss();
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_hebrew).setOnClickListener(view -> {
             lang="he";
             bottomSheetDialog.dismiss();
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_italian).setOnClickListener(view -> {
             lang="it";
             bottomSheetDialog.dismiss();
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_norwegian).setOnClickListener(view -> {
             lang="no";
             bottomSheetDialog.dismiss();
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_portuguese).setOnClickListener(view -> {
             lang="pt";
             bottomSheetDialog.dismiss();
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_russian).setOnClickListener(view -> {
             lang="ru";
             bottomSheetDialog.dismiss();
+            getNews();
         });
         bottomSheetView.findViewById(id.lang_swedish).setOnClickListener(view -> {
             lang="sv";
             bottomSheetDialog.dismiss();
+            getNews();
         });
     }
     private void getCategories(){
@@ -173,7 +184,7 @@ public class MainActivity extends AppCompatActivity implements CategoryRVAdapter
     }
 
 
-    private void getNews(String category){
+    private void getNews(){
         articleArrayList.clear();
         hottestNewsArticleList.clear();
         loadingPB.setVisibility(View.VISIBLE);
@@ -250,7 +261,7 @@ public class MainActivity extends AppCompatActivity implements CategoryRVAdapter
             i.putExtra("language", lang);
             this.startActivity(i);
         }
-        else getNews(category);
+        else getNews();
     }
 
 }
