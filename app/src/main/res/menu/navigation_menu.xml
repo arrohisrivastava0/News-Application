@@ -2,20 +2,9 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_home"
+            android:id="@+id/nav_lang"
             android:icon="@drawable/laguage"
             android:title="Language" >
-            <menu>
-                <item
-                    android:id="@+id/lang_english"
-                    android:icon="@drawable/laguage"
-                    android:title="English" />
-                <item
-                    android:id="@+id/lang_spanish"
-                    android:icon="@drawable/laguage"
-                    android:title="Spanish" />
-
-            </menu>
 
         </item>
 
@@ -23,18 +12,6 @@
             android:id="@+id/nav_country"
             android:icon="@drawable/baseline_language_24"
             android:title="Country">
-
-            <menu>
-                <item
-                    android:id="@+id/country_us"
-                    android:icon="@drawable/laguage"
-                    android:title="USA" />
-                <item
-                    android:id="@+id/country_uk"
-                    android:icon="@drawable/laguage"
-                    android:title="UK" />
-            </menu>
-
 
         </item>
         <!-- add more items here -->

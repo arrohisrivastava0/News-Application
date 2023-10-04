@@ -19,6 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class ExplorePageActivity extends AppCompatActivity implements CategoryRVAdapter.CategoryOnClickInterface{
     private String category;
+    private String lang;
     private CategoryRVAdapter exCategoryRVAdapter;
     private NewsRVAdapter exNewsRVAdapter;
     private RecyclerView exploreCatRV, exploreNewsRV;
@@ -41,6 +42,7 @@ public class ExplorePageActivity extends AppCompatActivity implements CategoryRV
         exploreNewsRV.setAdapter(exNewsRVAdapter);
         exploreCatRV.setAdapter(exCategoryRVAdapter);
         category=getIntent().getStringExtra("category");
+        lang=getIntent().getStringExtra("language");
         getCategories();
         getCatNews(category);
         exNewsRVAdapter.notifyDataSetChanged();
@@ -60,7 +62,7 @@ public class ExplorePageActivity extends AppCompatActivity implements CategoryRV
     private void getCatNews(String category){
         articleArrayList.clear();
         loadingPB.setVisibility(View.VISIBLE);
-        String category_url="https://newsapi.org/v2/top-headlines?category="+category+"&language=en&apiKey=1f840d4b397343a2b5518856eabf6d4d";
+        String category_url="https://newsapi.org/v2/top-headlines?category="+category+"&language="+lang+"&apiKey=1f840d4b397343a2b5518856eabf6d4d";
         String base_url="https://newsapi.org/";
         Retrofit retrofit=new Retrofit.Builder()
                 .baseUrl(base_url)
