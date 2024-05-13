@@ -1,9 +1,9 @@
 # News Application
 A Java based Android application which fetches real time news data from a news api.
 <p>
-  <img src="https://github.com/arrohisrivastava0/News-Application/blob/master/images/newsApp_ss1.jpg" width="300">
-  <img src="https://github.com/arrohisrivastava0/News-Application/blob/master/images/newsApp_ss2.jpg" width="300">
-  <img src="https://github.com/arrohisrivastava0/News-Application/blob/master/images/newsApp_ss3.jpg" width="300">
+  <img src="https://github.com/arrohisrivastava0/News-Application/blob/master/images/newsApp_ss1.jpg" width="25%">
+  <img src="https://github.com/arrohisrivastava0/News-Application/blob/master/images/newsApp_ss2.jpg" width="25%">
+  <img src="https://github.com/arrohisrivastava0/News-Application/blob/master/images/newsApp_ss3.jpg" width="25%">
 </p>
 
 ## Installation
